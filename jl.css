@@ -1,0 +1,393 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1a202c;
+  background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
+}
+
+/* General Slide Styles */
+.slide {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Background Clip for Compatibility */
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #2b6cb0, #4299e1);
+  -webkit-background-clip: text; /* Safari and older Chrome */
+  background-clip: text; /* Standard syntax */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text; /* Firefox, added for compatibility */
+  margin-bottom: 2rem;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.accent-text {
+  color: #4299e1;
+  font-weight: 600;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.75rem;
+  color: #2b6cb0;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #2d3748;
+}
+
+.card ul li .icon {
+  width: 40px;
+  height: 40px;
+  background: #ebf8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4299e1;
+  font-size: 1.5rem;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: #4299e1;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2b6cb0;
+  border-radius: 4px;
+  width: 0;
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+/* Contact Section */
+.contact {
+  background: #2d3748;
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #edf2f7;
+}
+
+.contact p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.contact p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Highlight Buttons (Optional) */
+.card .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background: #4299e1;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card .cta:hover {
+  background: #2b6cb0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+/* Investment Section */
+.investment {
+  background: #edf2f7;
+  color: #2d3748;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.investment h2 {
+  color: #2b6cb0;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.investment p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.investment .cta {
+  padding: 1rem 2rem;
+  background: #4299e1;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.investment .cta:hover {
+  background: #2b6cb0;
+}
+/* Our Story Section */
+.personal-story {
+  background: #f9fafb; /* Light background to differentiate the section */
+  color: #2d3748; /* Dark text for readability */
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 4rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personal-story h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b6cb0; /* Accent color for the heading */
+  margin-bottom: 1.5rem;
+}
+
+.personal-story p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #4a5568; /* Slightly muted text color for readability */
+  font-style: italic; /* Italicized to emphasize personal touch */
+}
+
+.personal-story .accent-text {
+  color: #4299e1; /* Blue color for emphasis */
+  font-weight: 600;
+}
+
+.personal-story .cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #4299e1;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.personal-story .cta:hover {
+  background: #2b6cb0;
+}
+/* Contact Section */
+.contact {
+  background: #2d3748; /* Background color */
+  color: #edf2f7; /* Lighter text color for contrast */
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff; /* White color for the heading */
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #edf2f7; /* Light text color for regular paragraphs */
+}
+
+.contact .accent-text {
+  color: #4299e1; /* Accent color for important text like names or emphasis */
+}
+
+/* Contact Section */
+.contact {
+  background: #2d3748; /* Dark background */
+  color: #edf2f7; /* Light text for good contrast */
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 5rem auto;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #edf2f7;
+  line-height: 1.6;
+}
+
+.contact .accent-text {
+  color: #4299e1; /* Accent color for names or emphasis */
+}
+
+.contact .cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #4299e1; /* Bright call-to-action color */
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.contact .cta:hover {
+  background: #2b6cb0;
+  transform: translateY(-3px); /* Hover effect with smooth movement */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
